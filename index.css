@@ -36,17 +36,19 @@ img{
 }
 
 
+/* Contenido de index.css */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #1a1a1a;
   color: #fff;
   margin: 0;
   padding: 0;
+  font-size: 20px; /* Ajustar el tamaño de fuente base */
 }
 
 h1 {
   text-align: center;
-  padding: 20px;
+  font-size: 32px; /* Ajustar el tamaño de fuente para los títulos */
 }
 
 ul {
@@ -57,15 +59,15 @@ ul {
 }
 
 ul li {
-  margin: 10px 0;
+  margin: 20px 0; /* Incrementar el espacio entre elementos de la lista */
 }
 
 ul li a {
   text-decoration: none;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px 30px; /* Incrementar el relleno de los enlaces */
   border: 2px solid #fff;
-  border-radius: 5px;
+  border-radius: 10px; /* Hacer los bordes de los enlaces más redondeados */
   display: inline-block;
 }
 
@@ -77,6 +79,7 @@ ul li a:hover {
 .qr_content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Incrementar el espacio entre imágenes */
   justify-content: center;
   margin: 20px;
 }
@@ -84,8 +87,8 @@ ul li a:hover {
 .qr_content img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  /*box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);*/
+  border-radius: 15px; /* Hacer los bordes de las imágenes más redondeados */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Incrementar el tamaño de la sombra */
 }
 
 /* Estilo para dispositivos móviles */
@@ -100,3 +103,4 @@ ul li a:hover {
     grid-template-columns: 1fr;
   }
 }
+
