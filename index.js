@@ -11,7 +11,7 @@ function onLoad(){
   let qr2 = localStorage.getItem("qr2");
   let qr3 = localStorage.getItem("qr3");
   let qr4 = localStorage.getItem("qr4");
-
+/*
   if(qr1 || true){
     qr1_img.style.display = "block";
   }else{
@@ -33,4 +33,5 @@ function onLoad(){
   }else{
     qr4_img.style.display = "none";
   }
+  */
 }
