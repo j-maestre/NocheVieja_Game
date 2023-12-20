@@ -1,0 +1,32 @@
+.qr_content {
+  border: 2px solid black;
+  display: grid;
+  grid-template-areas:
+      "imagen1 imagen2"
+      "imagen3 imagen4";
+  gap: 0px; /* Espacio entre las imágenes */
+  justify-content: center; /* Centrar en el eje horizontal */
+}
+
+.qr_content img {
+  border: 0px solid blue;
+  width: 100%; /* Ajustar el ancho de las imágenes al 100% del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
+}
+
+/* Asignar las áreas a las imágenes */
+.qr_content img:nth-child(1) {
+  grid-area: imagen1;
+}
+
+.qr_content img:nth-child(2) {
+  grid-area: imagen2;
+}
+
+.qr_content img:nth-child(3) {
+  grid-area: imagen3;
+}
+
+.qr_content img:nth-child(4) {
+  grid-area: imagen4;
+}
