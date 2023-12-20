@@ -35,6 +35,14 @@ img{
   display: none;
 }
 
+.mostrar {
+  opacity: 1;
+}
+
+.ocultar {
+  opacity: 0;
+}
+
 
 /* Contenido de index.css */
 body {
@@ -43,12 +51,14 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  font-size: 20px; /* Ajustar el tamaño de fuente base */
+  font-size: 24px; /* Ajustar el tamaño de fuente base */
+  transition: all 1s ease-in-out;
 }
 
-h1 {
+.title {
   text-align: center;
-  font-size: 32px; /* Ajustar el tamaño de fuente para los títulos */
+  font-size: 90px; /* Ajustar el tamaño de fuente para los títulos */
+  margin: 20px 0; /* Incrementar el espacio alrededor del título */
 }
 
 ul {
@@ -59,16 +69,17 @@ ul {
 }
 
 ul li {
-  margin: 20px 0; /* Incrementar el espacio entre elementos de la lista */
+  margin: 60px 0; /* Incrementar el espacio entre elementos de la lista */
 }
 
 ul li a {
   text-decoration: none;
   color: #fff;
-  padding: 15px 30px; /* Incrementar el relleno de los enlaces */
-  border: 2px solid #fff;
-  border-radius: 10px; /* Hacer los bordes de los enlaces más redondeados */
+  padding: 20px 40px; /* Incrementar el relleno de los enlaces */
+  border: 3px solid #fff; /* Incrementar el grosor del borde de los enlaces */
+  border-radius: 15px; /* Hacer los bordes de los enlaces más redondeados */
   display: inline-block;
+  font-size: 50px;
 }
 
 ul li a:hover {
@@ -79,16 +90,16 @@ ul li a:hover {
 .qr_content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px; /* Incrementar el espacio entre imágenes */
+  gap: 30px; /* Incrementar el espacio entre imágenes */
   justify-content: center;
-  margin: 20px;
+  margin: 30px;
 }
 
 .qr_content img {
   width: 100%;
   height: auto;
-  border-radius: 15px; /* Hacer los bordes de las imágenes más redondeados */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Incrementar el tamaño de la sombra */
+  border-radius: 20px; /* Hacer los bordes de las imágenes más redondeados */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Incrementar el tamaño de la sombra */
 }
 
 /* Estilo para dispositivos móviles */

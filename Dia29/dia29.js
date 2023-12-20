@@ -33,7 +33,7 @@ function checkNumber(){
     setTimeout(function() {
       // Redireccionar a la nueva página
       window.location.href = "../index.html";
-    }, 1000);
+    }, 1800);
   }else{
     let audio = new Audio("../assets/error2.ogg");
     audio.play();

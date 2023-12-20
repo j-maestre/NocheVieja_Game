@@ -3,12 +3,6 @@
   transition: all 1s ease-in-out;
 }
 
-
-body{
-  /*opacity: 1; */
-  transition: all 1s ease-in-out;
-}
-
 .mostrar {
   opacity: 1;
 }
@@ -18,7 +12,9 @@ body{
   /*display: none;*/
 }
 
-
+.title{
+  font-size: 35px;
+}
 /* Contenido de dia29.css */
 body {
   font-family: 'Arial', sans-serif;
@@ -27,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px; /* Ajustar el tamaño de fuente base */
+  transition: all 1s ease-in-out;
 }
 
 #pista1, #pista2 {
@@ -54,11 +51,12 @@ p {
 input {
   width: 100%;
   padding: 15px; /* Incrementar el relleno del input */
-  margin: 15px 0; /* Incrementar el espacio alrededor del input */
+  margin: 40px 0; /* Incrementar el espacio alrededor del input */
   border: 2px solid #fff;
   border-radius: 10px; /* Hacer los bordes del input más redondeados */
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
+  font-size: 40px;
 }
 
 .btn {
@@ -69,6 +67,7 @@ input {
   border: 2px solid #fff;
   border-radius: 10px;
   display: inline-block;
+  font-size: 40px;
 }
 
 .btn:hover {
@@ -76,9 +75,6 @@ input {
   color: #fff;
 }
 
-.ocultar {
-  display: none;
-}
 
 a {
   display: block;

@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", onLoad);
 
 function onLoad(){
+
+  document.body.classList.remove("ocultar");
+  document.body.classList.add("mostrar");
   let qr1_img = document.getElementById("qr1");
   let qr2_img = document.getElementById("qr2");
   let qr3_img = document.getElementById("qr3");
