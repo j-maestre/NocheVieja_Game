@@ -13,7 +13,7 @@
 }
 
 .title{
-  font-size: 35px;
+  font-size: 30px;
 }
 /* Contenido de dia29.css */
 body {
@@ -49,14 +49,13 @@ p {
 }
 
 input {
-  width: 100%;
-  padding: 15px; /* Incrementar el relleno del input */
-  margin: 40px 0; /* Incrementar el espacio alrededor del input */
+  padding: 15px;
+  margin: 40px 0;
   border: 2px solid #fff;
-  border-radius: 10px; /* Hacer los bordes del input más redondeados */
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 
@@ -75,6 +74,10 @@ a {
 a:hover {
   background-color: #fff;
   color: #1a1a1a;
+}
+
+.btn{
+  font-size: 20px;
 }
 
 /* Estilo para dispositivos móviles */

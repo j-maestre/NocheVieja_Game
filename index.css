@@ -93,7 +93,7 @@ body {
 
 .title {
   text-align: center;
-  font-size: 90px; /* Ajustar el tamaño de fuente para los títulos */
+  font-size: 50px; /* Ajustar el tamaño de fuente para los títulos */
   margin: 20px 0; /* Incrementar el espacio alrededor del título */
 }
 
@@ -115,7 +115,7 @@ ul li a {
   border: 3px solid #fff; /* Incrementar el grosor del borde de los enlaces */
   border-radius: 15px; /* Hacer los bordes de los enlaces más redondeados */
   display: inline-block;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 ul li a:hover {
@@ -134,20 +134,18 @@ ul li a:hover {
 .qr_content img {
   width: 100%;
   height: auto;
-  border-radius: 20px; /* Hacer los bordes de las imágenes más redondeados */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Incrementar el tamaño de la sombra */
 }
 
 /* Estilo para dispositivos móviles */
 @media (max-width: 600px) {
   ul li a {
     display: block;
-    width: 80%;
+    width: 45%;
     margin: 0 auto;
   }
 
   .qr_content {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
