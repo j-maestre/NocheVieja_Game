@@ -59,21 +59,6 @@ input {
   font-size: 40px;
 }
 
-.btn {
-  cursor: pointer;
-  background-color: #fff;
-  color: #1a1a1a;
-  padding: 15px 30px; /* Incrementar el relleno del botón */
-  border: 2px solid #fff;
-  border-radius: 10px;
-  display: inline-block;
-  font-size: 40px;
-}
-
-.btn:hover {
-  background-color: #1a1a1a;
-  color: #fff;
-}
 
 
 a {

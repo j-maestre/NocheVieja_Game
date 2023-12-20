@@ -36,5 +36,10 @@ function onLoad(){
   }else{
     qr4_img.style.display = "none";
   }
+
+
+  document.getElementById("Reset").addEventListener("click",function(){
+    localStorage.clear();
+  });
   
 }
