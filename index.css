@@ -4,7 +4,7 @@
   grid-template-areas:
       "imagen1 imagen2"
       "imagen3 imagen4";
-  gap: 0px; /* Espacio entre las imágenes */
+  gap: 0px !important; /* Espacio entre las imágenes */
   justify-content: center; /* Centrar en el eje horizontal */
 }
 
@@ -33,4 +33,70 @@
 
 img{
   display: none;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+ul li a:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+.qr_content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  margin: 20px;
+}
+
+.qr_content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /*box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);*/
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 600px) {
+  ul li a {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .qr_content {
+    grid-template-columns: 1fr;
+  }
 }
