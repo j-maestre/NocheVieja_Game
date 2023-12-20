@@ -11,27 +11,27 @@ function onLoad(){
   let qr2 = localStorage.getItem("qr2");
   let qr3 = localStorage.getItem("qr3");
   let qr4 = localStorage.getItem("qr4");
-/*
-  if(qr1 || true){
+
+  if(qr1){
     qr1_img.style.display = "block";
   }else{
     qr1_img.style.display = "none";
   }
   
-  if(qr2 || true){
+  if(qr2){
     qr2_img.style.display = "block";
   }else{
     qr2_img.style.display = "none";
   }
-  if(qr3 || true){
+  if(qr3){
     qr3_img.style.display = "block";
   }else{
     qr3_img.style.display = "none";
   }
-  if(qr4 || true){
+  if(qr4){
     qr4_img.style.display = "block";
   }else{
     qr4_img.style.display = "none";
   }
-  */
+  
 }

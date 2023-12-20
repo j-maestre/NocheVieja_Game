@@ -30,3 +30,7 @@
 .qr_content img:nth-child(4) {
   grid-area: imagen4;
 }
+
+img{
+  display: none;
+}

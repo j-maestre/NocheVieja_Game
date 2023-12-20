@@ -1,0 +1,19 @@
+#pista2{
+  /* display: none; */
+  transition: all 1s ease-in-out;
+}
+
+
+body{
+  /*opacity: 1; */
+  transition: all 1s ease-in-out;
+}
+
+.mostrar {
+  opacity: 1;
+}
+
+.ocultar {
+  opacity: 0;
+  /*display: none;*/
+}
