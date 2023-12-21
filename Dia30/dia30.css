@@ -1,0 +1,111 @@
+#pista2{
+  /* display: none; */
+  transition: all 1s ease-in-out;
+}
+
+.mostrar {
+  opacity: 1;
+}
+
+.ocultar {
+  opacity: 0;
+  /*display: none;*/
+}
+
+.title{
+  font-size: 30px;
+}
+/* Contenido de dia29.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 18px; /* Ajustar el tamaño de fuente base */
+  transition: all 1s ease-in-out;
+}
+
+#pista1, #pista2 {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px; /* Hacer los bordes más redondeados */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Incrementar el tamaño de la sombra */
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px; /* Ajustar el tamaño de fuente para los títulos */
+}
+
+p {
+  text-align: center;
+  font-size: 18px; /* Ajustar el tamaño de fuente para los párrafos */
+}
+
+.content {
+  text-align: center;
+  max-width: 350px;
+  padding: 15px;
+}
+
+.content img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 15px;
+  margin: 20px 0;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 25px;
+}
+
+.bloque_pirata{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+
+.skulls{
+  text-align: center;
+}
+
+
+a {
+  display: block;
+  text-align: center;
+  margin: 20px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 15px 30px; /* Incrementar el relleno del enlace */
+  border-radius: 10px;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+.btn{
+  font-size: 20px;
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 600px) {
+  #pista1, #pista2 {
+    margin: 15px;
+    padding: 15px;
+  }
+}
+
