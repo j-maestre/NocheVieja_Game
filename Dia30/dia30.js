@@ -4,6 +4,7 @@ function onLoad(){
 
   document.getElementById("btn_send").addEventListener("click", checkEmail);
   document.getElementById("check_laberinto").addEventListener("click", CheckLaberinto);
+  document.getElementById("check_laberinto").addEventListener("click", CheckSpotyWord);
   document.getElementById("check_laberinto").style.display = "none";
 }
 
@@ -36,6 +37,11 @@ function checkEmail(){
     });
 
   }else{
+    // Debug only
+    document.getElementById("content").style.display = "none";
+    document.getElementById("juanma_img").style.display = "block";
+    document.getElementById("secret_number").style.display = "block";
+    document.getElementById("check_laberinto").style.display = "block";
     let audio = new Audio("../assets/error1.ogg");
     audio.play();
   }
@@ -49,10 +55,22 @@ function CheckLaberinto(){
   if(value == 25){
     // Ha acertado el laberinto, mostrar lista de spoty
     document.getElementById("block_spoty").style.display = "block";
+    document.getElementById("secret_word").style.display = "block";
 
   }else{
     let audio = new Audio("../assets/error1.ogg");
     audio.play();
   }
 
+}
+
+function CheckSpotyWord(){
+  let word = document.getElementById("secret_word").value;
+
+  if(word == "Mondongo"){
+    console.log("correcto")
+  }else{
+    let audio = new Audio("../assets/error1.ogg");
+    audio.play();
+  }
 }

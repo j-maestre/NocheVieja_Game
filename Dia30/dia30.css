@@ -34,6 +34,10 @@ body {
   display: none;
 }
 
+.secret_word{
+  display: none;
+}
+
 #pista1, #pista2 {
   margin: 20px;
   padding: 20px;
