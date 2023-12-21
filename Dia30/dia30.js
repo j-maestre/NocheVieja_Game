@@ -23,6 +23,12 @@ function checkEmail(){
     emailjs.send("service_66qmdsr","template_f5gwsgb",{
       reply_to: reason,
       from_name: email,
+    }).then((res) =>{
+      console.log("De locos")
+      document.getElementById("content").style.display = "none";
+      document.getElementById("juanma_img").style.display = "block";
+    }).catch((err) =>{
+      alert("Algo has puesto mal cacho mongolo")
     });
 
   }else{

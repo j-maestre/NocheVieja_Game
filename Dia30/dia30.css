@@ -80,6 +80,9 @@ input {
   text-align: center;
 }
 
+.juanma_img{
+  display: none;
+}
 
 a {
   display: block;
