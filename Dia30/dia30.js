@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", onLoad);
 function onLoad(){
 
   document.getElementById("btn_send").addEventListener("click", checkEmail);
+  document.getElementById("check_laberinto").addEventListener("click", CheckLaberinto);
+  document.getElementById("check_laberinto").style.display = "none";
 }
 
 
@@ -28,6 +30,7 @@ function checkEmail(){
       document.getElementById("content").style.display = "none";
       document.getElementById("juanma_img").style.display = "block";
       document.getElementById("secret_number").style.display = "block";
+      document.getElementById("check_laberinto").style.display = "block";
     }).catch((err) =>{
       alert("Algo has puesto mal cacho mongolo")
     });
@@ -36,4 +39,17 @@ function checkEmail(){
     let audio = new Audio("../assets/error1.ogg");
     audio.play();
   }
+}
+
+function CheckLaberinto(){
+  console.log("Check laberinto");
+  let value = document.getElementById("secret_number").value;
+  console.log(value);
+
+  if(value == 25){
+    // Ha acertado el laberinto, mostrar lista de spoty
+    document.getElementById("block_spoty").style.display = "block";
+
+  }
+
 }

@@ -15,6 +15,10 @@
 .title{
   font-size: 30px;
 }
+
+.block_spoty{
+  display: none;
+}
 /* Contenido de dia29.css */
 body {
   font-family: 'Arial', sans-serif;
@@ -24,6 +28,10 @@ body {
   padding: 0;
   font-size: 18px; /* Ajustar el tamaño de fuente base */
   transition: all 1s ease-in-out;
+}
+
+.check_laberinto{
+  display: none;
 }
 
 #pista1, #pista2 {
