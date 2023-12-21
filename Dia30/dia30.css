@@ -101,6 +101,22 @@ a:hover {
   font-size: 20px;
 }
 
+.btn{
+  display: block;
+  text-align: center;
+  margin: 20px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 15px 30px; /* Incrementar el relleno del enlace */
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
 /* Estilo para dispositivos móviles */
 @media (max-width: 600px) {
   #pista1, #pista2 {

@@ -58,9 +58,11 @@
       Con ojo atento,
       Capitán Barba Coa
     </p>
-    <input type="text" id="secret-padel" placeholder="Razon" />
-    <input type="email" id="secret-padel" placeholder="Email" />
-    <p id="btn-check-padel btn" class="btn">Enviar</p>
+    <form id="form_email">
+      <input type="text" for="from_name" id="reason" placeholder="Razon" />
+      <input type="email" for="reply_to" id="email" placeholder="Email" />
+      <p id="btn_send" class="btn">Enviar</p>
+    </form>
   </div>
 </div>
 
@@ -68,5 +70,6 @@
 
 <script src="dia30.js"></script>
 <script src="https://kit.fontawesome.com/a1d3af8fdb.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>
