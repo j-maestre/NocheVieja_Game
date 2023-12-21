@@ -76,6 +76,10 @@ input {
   align-items: center;
 }
 
+.secret_number{
+  display: none;
+}
+
 .skulls{
   text-align: center;
 }

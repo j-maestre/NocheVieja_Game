@@ -27,6 +27,7 @@ function checkEmail(){
       console.log("De locos")
       document.getElementById("content").style.display = "none";
       document.getElementById("juanma_img").style.display = "block";
+      document.getElementById("secret_number").style.display = "block";
     }).catch((err) =>{
       alert("Algo has puesto mal cacho mongolo")
     });
