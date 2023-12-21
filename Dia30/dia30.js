@@ -52,7 +52,7 @@ function CheckLaberinto(){
   let value = document.getElementById("secret_number").value;
   console.log(value);
 
-  if(value == 25){
+  if(value == 18){
     // Ha acertado el laberinto, mostrar lista de spoty
     document.getElementById("block_spoty").style.display = "block";
     document.getElementById("secret_word").style.display = "block";

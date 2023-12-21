@@ -70,16 +70,6 @@ p {
   margin-bottom: 20px;
 }
 
-input {
-  padding: 15px;
-  margin: 20px 0;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 25px;
-}
-
 .bloque_pirata{
   display: flex;
   flex-direction: column;
@@ -98,6 +88,22 @@ input {
 
 .juanma_img{
   display: none;
+}
+
+input {
+  /*padding: 15px 0px 15px 15px;
+  */
+  padding-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /*margin: 40px 0;*/
+  margin-bottom: 15px;
+  width: -webkit-fill-available;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 25px;
 }
 
 a {
