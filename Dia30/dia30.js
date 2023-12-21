@@ -50,6 +50,9 @@ function CheckLaberinto(){
     // Ha acertado el laberinto, mostrar lista de spoty
     document.getElementById("block_spoty").style.display = "block";
 
+  }else{
+    let audio = new Audio("../assets/error1.ogg");
+    audio.play();
   }
 
 }

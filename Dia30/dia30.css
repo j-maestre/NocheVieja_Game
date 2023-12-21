@@ -30,7 +30,7 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.check_laberinto{
+#check_laberinto{
   display: none;
 }
 
