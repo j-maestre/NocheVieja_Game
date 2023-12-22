@@ -3,7 +3,7 @@
 const pistaPadel = "07/01/1768"
 const clavePadel ="Pepe botella"
 
-const claveLaberinto = 25
+const claveLaberinto = 19
 const claveSpoty = "Mondongo"
 
 const clave1 = "https://"

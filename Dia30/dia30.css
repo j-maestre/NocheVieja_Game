@@ -76,6 +76,7 @@ p {
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
+  transition: all 1s;
 }
 
 .secret_number{
@@ -88,6 +89,24 @@ p {
 
 .juanma_img{
   display: none;
+}
+
+.mondongo_img{
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+#puzzleCanvas {
+  background-color: #fff; /* Fondo blanco para el lienzo */
+  border: 2px solid #000; /* Borde negro para el lienzo, ajusta según sea necesario */
+}
+
+.bloque_mondongo{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 input {
