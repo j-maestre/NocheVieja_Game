@@ -94,48 +94,33 @@ function CreateCanvas() {
   canvasContainer.appendChild(canvas);
 
   var ctx = canvas.getContext('2d');
+  
   resize();
 
-  var pos = { x: 0, y: 0 };
+  var drawing = false;
 
   window.addEventListener('resize', resize);
-  document.addEventListener('mousedown', setPosition);
-  document.addEventListener('mousemove', draw);
-  document.addEventListener('mouseenter', setPosition);
+  canvas.addEventListener('mousedown', startDrawing);
+  canvas.addEventListener('mouseup', stopDrawing);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('touchstart', startDrawing);
+  canvas.addEventListener('touchend', stopDrawing);
+  canvas.addEventListener('touchmove', draw);
+  canvas.addEventListener('touchcancel', stopDrawing);
 
-  // Agregar eventos táctiles
-  canvas.addEventListener('touchstart', handleTouchStart, false);
-  canvas.addEventListener('touchmove', handleTouchMove, false);
-
-  function setPosition(e) {
-    var rect = canvas.getBoundingClientRect();
-    pos.x = e.clientX - rect.left;
-    pos.y = e.clientY - rect.top;
+  function startDrawing(e) {
+    drawing = true;
+    setPosition(e);
+    e.preventDefault(); // Evitar desplazamiento predeterminado en dispositivos táctiles
   }
 
-  function handleTouchStart(e) {
-    if (e.touches.length === 1) {
-      var touch = e.touches[0];
-      setPosition(touch);
-    }
-  }
-
-  function handleTouchMove(e) {
-    e.preventDefault();
-    if (e.touches.length === 1) {
-      var touch = e.touches[0];
-      setPosition(touch);
-      draw(e);
-    }
-  }
-
-  function resize() {
-    canvas.width = canvasContainer.clientWidth;
-    canvas.height = canvasContainer.clientHeight;
+  function stopDrawing() {
+    drawing = false;
+    pos = { x: 0, y: 0 };
   }
 
   function draw(e) {
-    if (e.buttons !== 1 && e.type !== 'touchmove') return;
+    if (!drawing) return;
 
     ctx.beginPath();
     ctx.lineWidth = 5;
@@ -147,7 +132,27 @@ function CreateCanvas() {
     ctx.lineTo(pos.x, pos.y);
 
     ctx.stroke();
+    e.preventDefault(); // Evitar desplazamiento predeterminado en dispositivos táctiles
+  }
+
+  function setPosition(e) {
+    var rect = canvas.getBoundingClientRect();
+    if (e.touches) {
+      pos.x = e.touches[0].clientX - rect.left;
+      pos.y = e.touches[0].clientY - rect.top;
+    } else {
+      pos.x = e.clientX - rect.left;
+      pos.y = e.clientY - rect.top;
+    }
+  }
+
+  function resize() {
+    canvas.width = canvasContainer.clientWidth;
+    canvas.height = canvasContainer.clientHeight;
   }
 }
+
+
+
 
 
