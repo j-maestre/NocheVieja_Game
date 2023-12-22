@@ -6,7 +6,7 @@ function onLoad(){
   document.getElementById("check_laberinto").addEventListener("click", CheckLaberinto);
   document.getElementById("check_laberinto").addEventListener("click", CheckSpotyWord);
   document.getElementById("check_laberinto").style.display = "none";
-  checkCanvas();
+  CreateCanvas();
 }
 
 
@@ -79,6 +79,7 @@ function CheckSpotyWord(){
       audio.play();
       setTimeout(() => {
         document.getElementById("mondongo_img").style.display = "none";
+        CreateCanvas();
       }, 1000);
     }, 1100);
   }else{
@@ -87,67 +88,66 @@ function CheckSpotyWord(){
   }
 }
 
+function CreateCanvas() {
+  var canvas = document.createElement('canvas');
+  var canvasContainer = document.getElementById('canvas_container');
+  canvasContainer.appendChild(canvas);
 
-// Canvas
-function checkCanvas() {
-  const canvas = document.getElementById('puzzleCanvas');
-  const ctx = canvas.getContext('2d');
-  let isDrawing = false;
-  let points = [];
+  var ctx = canvas.getContext('2d');
+  resize();
 
-  canvas.addEventListener('mousedown', startDrawing);
-  canvas.addEventListener('mousemove', draw);
-  document.addEventListener('mouseup', stopDrawing);
+  var pos = { x: 0, y: 0 };
 
-  function startDrawing(event) {
-    console.log("Empezando a pintar");
-    isDrawing = true;
-    points = [];
-    ctx.beginPath();
-    ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+  window.addEventListener('resize', resize);
+  document.addEventListener('mousedown', setPosition);
+  document.addEventListener('mousemove', draw);
+  document.addEventListener('mouseenter', setPosition);
+
+  // Agregar eventos táctiles
+  canvas.addEventListener('touchstart', handleTouchStart, false);
+  canvas.addEventListener('touchmove', handleTouchMove, false);
+
+  function setPosition(e) {
+    var rect = canvas.getBoundingClientRect();
+    pos.x = e.clientX - rect.left;
+    pos.y = e.clientY - rect.top;
   }
 
-  function draw(event) {
-    console.log("Pintando");
-    if (!isDrawing) return;
-    console.log("Seguimos pintando");
-    const x = event.clientX - canvas.offsetLeft;
-    const y = event.clientY - canvas.offsetTop;
-
-    ctx.lineTo(x, y);
-    ctx.stroke();
-
-    points.push({ x, y });
-  }
-
-  function stopDrawing() {
-    console.log("Dejamos de pintar");
-    isDrawing = false;
-    checkDrawing(); // Llama a la función para verificar el dibujo al detener el dibujo
-  }
-
-  function checkDrawing() {
-    if (points.length >= 6) {
-      const triangle1 = points.slice(0, 3);
-      const triangle2 = points.slice(3, 6);
-
-      if (isClosed(triangle1, 10) && isClosed(triangle2, 10)) {
-        alert('¡Correcto! Has dibujado dos triángulos superpuestos. Pasaste la prueba.');
-      } else {
-        alert('Incorrecto. Intenta de nuevo.');
-      }
-    } else {
-      alert('Dibuja dos triángulos superpuestos. Intenta de nuevo.');
+  function handleTouchStart(e) {
+    if (e.touches.length === 1) {
+      var touch = e.touches[0];
+      setPosition(touch);
     }
   }
 
-  function isClosed(points, closeDistance) {
-    const firstPoint = points[0];
-    const lastPoint = points[points.length - 1];
-    const distance = Math.sqrt(
-      Math.pow(lastPoint.x - firstPoint.x, 2) + Math.pow(lastPoint.y - firstPoint.y, 2)
-    );
+  function handleTouchMove(e) {
+    e.preventDefault();
+    if (e.touches.length === 1) {
+      var touch = e.touches[0];
+      setPosition(touch);
+      draw(e);
+    }
+  }
 
-    return distance < closeDistance;
+  function resize() {
+    canvas.width = canvasContainer.clientWidth;
+    canvas.height = canvasContainer.clientHeight;
+  }
+
+  function draw(e) {
+    if (e.buttons !== 1 && e.type !== 'touchmove') return;
+
+    ctx.beginPath();
+    ctx.lineWidth = 5;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = '#c0392b';
+
+    ctx.moveTo(pos.x, pos.y);
+    setPosition(e);
+    ctx.lineTo(pos.x, pos.y);
+
+    ctx.stroke();
   }
 }
+
+
