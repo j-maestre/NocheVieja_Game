@@ -97,6 +97,10 @@ p {
   height: auto;
 }
 
+#check_spoty{
+  display: none;
+}
+
 #puzzleCanvas {
   background-color: #fff; /* Fondo blanco para el lienzo */
   border: 2px solid #000; /* Borde negro para el lienzo, ajusta según sea necesario */
@@ -107,6 +111,7 @@ p {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  display: none;
 }
 
 input {

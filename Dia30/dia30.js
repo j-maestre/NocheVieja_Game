@@ -4,9 +4,10 @@ function onLoad(){
 
   document.getElementById("btn_send").addEventListener("click", checkEmail);
   document.getElementById("check_laberinto").addEventListener("click", CheckLaberinto);
-  document.getElementById("check_laberinto").addEventListener("click", CheckSpotyWord);
+  document.getElementById("check_spoty").addEventListener("click", CheckSpotyWord);
   document.getElementById("check_laberinto").style.display = "none";
-  CreateCanvas();
+  document.getElementById("mondongo").style.display = "none-";
+  //CreateCanvas();
 }
 
 
@@ -39,10 +40,10 @@ function checkEmail(){
 
   }else{
     // Debug only
-    document.getElementById("content").style.display = "none";
-    document.getElementById("juanma_img").style.display = "block";
-    document.getElementById("secret_number").style.display = "block";
-    document.getElementById("check_laberinto").style.display = "block";
+    //document.getElementById("content").style.display = "none";
+    //document.getElementById("juanma_img").style.display = "block";
+    //document.getElementById("secret_number").style.display = "block";
+    //document.getElementById("check_laberinto").style.display = "block";
     let audio = new Audio("../assets/error1.ogg");
     audio.play();
   }
@@ -57,6 +58,8 @@ function CheckLaberinto(){
     // Ha acertado el laberinto, mostrar lista de spoty
     document.getElementById("block_spoty").style.display = "block";
     document.getElementById("secret_word").style.display = "block";
+    document.getElementById("check_spoty").style.display = "block";
+    document.getElementById("check_laberinto").style.display = "none";
 
   }else{
     let audio = new Audio("../assets/error1.ogg");
@@ -79,6 +82,7 @@ function CheckSpotyWord(){
       audio.play();
       setTimeout(() => {
         document.getElementById("mondongo_img").style.display = "none";
+        document.getElementById("mondongo").style.display = "block";
         CreateCanvas();
       }, 1000);
     }, 1100);
@@ -144,14 +148,22 @@ function CreateCanvas() {
   function stopDrawing() {
     drawing = false;
     if (isTriangle(points)) {
-      alert("¡Es un triángulo!");
+      alert("Noo!! Descubriste mi secreto...");
+      setTimeout(() => {
+        document.body.classList.add("ocultar");
+        setTimeout(() => {
+          localStorage.setItem("qr2",true)
+          window.location.href = "../index.html";
+          
+        }, 1500);
+      }, 2000);
     } else {
       console.log("No es un triángulo");
+      canvas.width = canvas.width;
     }
     pos = { x: 0, y: 0 };
 
     // Reset del canvas cada vez que suelta el dedo
-    canvas.width = canvas.width;
   }
 
   function draw(e) {
@@ -279,12 +291,7 @@ function CreateCanvas() {
    return isTriangle && MagnitudeRange(points[0],points[points.length-1], 5);
   }
   
-  function getDistance(point1, point2) {
-    // Calcula la distancia euclidiana entre dos puntos
-    var dx = point2.x - point1.x;
-    var dy = point2.y - point1.y;
-    return Math.sqrt(dx * dx + dy * dy);
-  }
+ 
 }
 
 
