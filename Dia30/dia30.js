@@ -88,16 +88,40 @@ function CheckSpotyWord(){
   }
 }
 
+
+function angleBetweenThreePoints(A, B, C) {
+  var AB = Math.sqrt(Math.pow(B.x - A.x, 2) + Math.pow(B.y - A.y, 2));
+  var BC = Math.sqrt(Math.pow(B.x - C.x, 2) + Math.pow(B.y - C.y, 2));
+  var AC = Math.sqrt(Math.pow(C.x - A.x, 2) + Math.pow(C.y - A.y, 2));
+
+  var angleInRadians = Math.acos((BC * BC + AB * AB - AC * AC) / (2 * BC * AB));
+  var angleInDegrees = (angleInRadians * 180) / Math.PI;
+
+  return angleInDegrees;
+}
+
+function isInRange(number, rangeStart, rangeEnd) {
+  return number >= rangeStart && number <= rangeEnd;
+}
+
+function MagnitudeRange(vector1, vector2, threshold) {
+  let distance = Math.sqrt(Math.pow(vector2.x - vector1.x, 2) + Math.pow(vector2.y - vector1.y, 2));
+
+  console.log("Distance-> ", distance);
+  return distance <= threshold;
+}
+
 function CreateCanvas() {
   var canvas = document.createElement('canvas');
   var canvasContainer = document.getElementById('canvas_container');
   canvasContainer.appendChild(canvas);
 
   var ctx = canvas.getContext('2d');
-  
-  resize();
-
   var drawing = false;
+  var points = []; // Nueva variable para almacenar los puntos
+  let pos = { x: 0, y: 0 };
+
+  resize();
 
   window.addEventListener('resize', resize);
   canvas.addEventListener('mousedown', startDrawing);
@@ -108,15 +132,26 @@ function CreateCanvas() {
   canvas.addEventListener('touchmove', draw);
   canvas.addEventListener('touchcancel', stopDrawing);
 
+  
+
   function startDrawing(e) {
     drawing = true;
     setPosition(e);
-    e.preventDefault(); // Evitar desplazamiento predeterminado en dispositivos táctiles
+    points = []; // Limpiar puntos al comenzar el dibujo
+    e.preventDefault();
   }
 
   function stopDrawing() {
     drawing = false;
+    if (isTriangle(points)) {
+      alert("¡Es un triángulo!");
+    } else {
+      console.log("No es un triángulo");
+    }
     pos = { x: 0, y: 0 };
+
+    // Reset del canvas cada vez que suelta el dedo
+    canvas.width = canvas.width;
   }
 
   function draw(e) {
@@ -132,7 +167,13 @@ function CreateCanvas() {
     ctx.lineTo(pos.x, pos.y);
 
     ctx.stroke();
-    e.preventDefault(); // Evitar desplazamiento predeterminado en dispositivos táctiles
+    e.preventDefault();
+
+    // Almacena los puntos mientras se dibuja
+    let vec2 = {"x" : pos.x, "y" : pos.y};
+    //points.push({ x: pos.x, y: pos.y });
+    points.push(vec2);
+    console.log(points)
   }
 
   function setPosition(e) {
@@ -150,8 +191,101 @@ function CreateCanvas() {
     canvas.width = canvasContainer.clientWidth;
     canvas.height = canvasContainer.clientHeight;
   }
-}
 
+  function isTriangle(points) {
+
+    
+    let firstPoint = {x : points[0].x, y : points[0].y};
+    let secondPoint = {x : 0, y : 0};
+    let thirdPoint = {x : 0, y : 0};
+    if (points.length < 3) {
+      return false;
+    }
+
+    let bajamos = false;
+    let cagadon = false;
+    for(let i = 1; i < points.length; i++){
+      if(points[i].y <= points[i-1].y){
+        // El de ahora es menor que el de antes, todo bien
+        if(bajamos){
+          // En este momento ya habiamos empezado a bajar, si se vuelve a dar el caso esque algo ha hecho mal
+          cagadon = true;
+          console.log("cagaste");
+        }
+      }else{
+        // ha empezado a bajar
+        if(!bajamos){
+          bajamos = true;
+          secondPoint = points[i];
+        }
+        
+      }
+    }
+    
+    // Checkeamos el ultimo punto
+    let izquierda = false;
+    let otro_cagadon = false;
+    for(let i = 1; i < points.length; i++){
+      // Si soy mayor al anterior es que estoy tirando hacia la derecha
+      if(points[i].x >= points[i-1].x){
+        
+        if(izquierda){
+          otro_cagadon = true;
+          console.log("cagaste otra vez");
+        }
+        
+      }else{
+        // Aqui he empezado a dibujar hacia la izquierda
+        if(!izquierda){
+          izquierda = true;
+          thirdPoint = points[i];
+        }
+      }
+    }
+    console.log("lenght: " , points.length);
+    console.log("First-> " , firstPoint);
+    console.log("Second-> " , secondPoint);
+    console.log("Third-> ", thirdPoint);
+
+    let angle1 = angleBetweenThreePoints(firstPoint, secondPoint, thirdPoint);
+    let angle2 = angleBetweenThreePoints(secondPoint, thirdPoint, firstPoint);
+    let angle3 = angleBetweenThreePoints(thirdPoint, firstPoint, secondPoint);
+
+    console.log("First angle ", angle1);
+    console.log("Second angle ", angle2);
+    console.log("Third angle ", angle3);
+
+    let isTriangle = true;
+
+    if(isInRange(angle1, 50,70)){
+      console.log("Primer angulo ok")
+    }else{
+      console.log("Es una cosa rara")
+      isTriangle = false;
+    }
+    if(isInRange(angle2, 50,70)){
+      console.log("Segundo angulo ok")
+    }else{
+      console.log("Es una cosa rara")
+      isTriangle = false;
+    }
+    if(isInRange(angle3, 50,70)){
+      console.log("Tercer angulo ok")
+    }else{
+      console.log("Es una cosa rara")
+      isTriangle = false;
+    }
+  
+   return isTriangle && MagnitudeRange(points[0],points[points.length-1], 5);
+  }
+  
+  function getDistance(point1, point2) {
+    // Calcula la distancia euclidiana entre dos puntos
+    var dx = point2.x - point1.x;
+    var dy = point2.y - point1.y;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+}
 
 
 
