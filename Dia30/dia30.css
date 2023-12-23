@@ -106,6 +106,28 @@ p {
   border: 2px solid #000; /* Borde negro para el lienzo, ajusta según sea necesario */
 }
 
+#canvas_container {
+  position: relative;
+}
+
+.canvas_block {
+  border: 2px solid #3498db; /* Borde azul */
+  cursor: crosshair; /* Cambia el cursor al estilo de cruz para indicar que se puede dibujar */
+  background-color: #ecf0f1; /* Color de fondo gris claro */
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+}
+
+#draw_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: #3498db; /* Color azul para que coincida con el borde del canvas */
+  cursor: crosshair;
+  opacity: 0.5;
+}
+
 .bloque_mondongo{
   display: flex;
   flex-direction: column;

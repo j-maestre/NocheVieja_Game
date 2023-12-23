@@ -23,20 +23,20 @@ function checkEmail(){
     //const serviceID = 'default_service';
     //const templateID = 'template_f5gwsgb';
     const publicKey = "zug5qRn6mv_hg8oOs";
-    emailjs.init(publicKey);
+    //emailjs.init(publicKey);
 
-    emailjs.send("service_66qmdsr","template_f5gwsgb",{
-      reply_to: reason,
-      from_name: email,
-    }).then((res) =>{
+    //emailjs.send("service_66qmdsr","template_f5gwsgb",{
+      //reply_to: reason,
+      //from_name: email,
+    //}).then((res) =>{
       console.log("De locos")
       document.getElementById("content").style.display = "none";
       document.getElementById("juanma_img").style.display = "block";
       document.getElementById("secret_number").style.display = "block";
       document.getElementById("check_laberinto").style.display = "block";
-    }).catch((err) =>{
-      alert("Algo has puesto mal cacho mongolo")
-    });
+    //}).catch((err) =>{
+      //alert("Algo has puesto mal cacho mongolo")
+    //});
 
   }else{
     // Debug only
@@ -118,6 +118,14 @@ function MagnitudeRange(vector1, vector2, threshold) {
 function CreateCanvas() {
   var canvas = document.createElement('canvas');
   var canvasContainer = document.getElementById('canvas_container');
+  canvas.classList.add("canvas_block");
+
+  var drawIcon = document.createElement('i');
+  drawIcon.className = 'fas fa-pen';
+  drawIcon.id = 'draw_icon';
+
+
+  canvasContainer.appendChild(drawIcon);
   canvasContainer.appendChild(canvas);
 
   var ctx = canvas.getContext('2d');
