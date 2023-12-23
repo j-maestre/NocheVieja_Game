@@ -1,0 +1,64 @@
+a {
+  display: block;
+  text-align: center;
+  margin: 20px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 15px 30px; /* Incrementar el relleno del enlace */
+  border-radius: 10px;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+p {
+  text-align: center;
+  font-size: 18px; /* Ajustar el tamaño de fuente para los párrafos */
+}
+
+.btn{
+  font-size: 20px;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #1a1a1a;
+  margin: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#name{
+  margin-top: 20px;
+  padding-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /*margin: 40px 0;*/
+  margin-bottom: 15px;
+  width: -webkit-fill-available;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 25px;
+}
+
+.block_maps {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px; /* Hacer los bordes más redondeados */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Incrementar el tamaño de la sombra */
+}
+
+#world_icon::before{
+  font-size: 125px;
+}
