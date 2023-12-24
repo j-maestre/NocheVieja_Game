@@ -71,6 +71,15 @@ body {
   color: #fff;
 }
 
+.locked {
+  pointer-events: none;
+  text-decoration: none;
+  color: #999;
+  cursor: not-allowed;
+  border-color: red;
+  transition: all 1s;
+}
+
 .reset-btn {
   position: relative;
   top: 30px; /* Ajusta la distancia vertical desde el centro */
