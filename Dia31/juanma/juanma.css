@@ -14,13 +14,6 @@ a:hover {
   color: #1a1a1a;
 }
 
-.completed {
-  border: 3px solid #4CAF50;
-  box-shadow: 0 0 10px 3px #4CAF50; /* Agrega una sombra verde para resaltar la imagen */
-  transition: all 0.3s ease;
-  cursor: not-allowed;
-}
-
 p {
   text-align: center;
   font-size: 18px; /* Ajustar el tamaño de fuente para los párrafos */
