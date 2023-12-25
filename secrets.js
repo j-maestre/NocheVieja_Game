@@ -16,6 +16,8 @@ const maps_2_link = "https://www.google.es/maps/@38.8206086,-0.597979,3a,75y,307
 const maps_3_link = "https://www.google.com/maps/@41.6527779,-0.8801563,3a,75y,318.45h,101.26t/data=!3m6!1e1!3m4!1s3XT7n51Gfj6LDIDg2upeaw!2e0!7i13312!8i6656?entry=ttu";
 
 
+const crucigrama = "https://puzzel.org/es/crossword/play?p=-NmVirvslgwA8uhhAs2A";
+
 const clave1 = "https://"
 const clave2 = ""
 const clave3 = ""

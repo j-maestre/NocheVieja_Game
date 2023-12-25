@@ -23,6 +23,16 @@ p {
   font-size: 20px;
 }
 
+.block_main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+img{
+  display: block !important;
+}
 .pirate_img{
   display: block;
   width: 150px;

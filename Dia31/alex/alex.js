@@ -16,7 +16,7 @@ function checkMaps(){
       window.location.href = "../dia31.html";
     }, 1800);
   }else{
-    let audio = new Audio("../assets/error3.ogg");
+    let audio = new Audio("../../assets/error3.ogg");
     audio.play();
   }
 }
