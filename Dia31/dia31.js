@@ -17,6 +17,13 @@ function onLoad(){
   if(juanma){
     document.getElementById("juanma_img").classList.add("completed");
   }
+
+  if( rafa && juanma && alex){
+    document.body.classList.add("ocultar");
+    setTimeout(() => {
+      window.location.href = "../index.html";
+    }, 1800);
+  }
 }
 
 

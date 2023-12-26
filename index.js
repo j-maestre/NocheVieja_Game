@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", onLoad);
 
 var fechaDia29 = new Date("2023-12-24T23:00:00Z");
+//var fechaDia29 = new Date("2023-12-29T23:00:00Z");
+
 var fechaDia30 = new Date("2023-12-24T23:00:00Z");
+//var fechaDia30 = new Date("2023-12-30T23:00:00Z");
+
 var fechaDia31 = new Date("2023-12-24T23:00:00Z");
+//var fechaDia31 = new Date("2023-12-31T23:00:00Z");
 
 function ActualizarContadores(){
   let fechaActual = new Date();
@@ -65,31 +70,6 @@ function onLoad(){
   document.body.classList.add("mostrar");
   setInterval(ActualizarContadores, 1000);
 
-  /*
-  
-  // Estamos en diciembre
-  if(mes == 12){
-
-    if(dia >= 0){
-      //document.getElementById("dia_29").style.display = "block";
-    }else{
-      document.getElementById("dia_29").href = "#";
-
-    }
-    
-    if(dia >= 0){
-      document.getElementById("dia_30").style.display = "block";
-    }else{
-      document.getElementById("dia_30").style.display = "none";
-    }
-    
-    if(dia >= 0){
-      document.getElementById("dia_31").style.display = "block";
-    }else{
-      document.getElementById("dia_31").style.display = "none";
-    }
-    
-  }*/
   let qr1_img = document.getElementById("qr1");
   let qr2_img = document.getElementById("qr2");
   let qr3_img = document.getElementById("qr3");
@@ -98,7 +78,6 @@ function onLoad(){
 
   let qr1 = localStorage.getItem("qr1");
   let qr2 = localStorage.getItem("qr2");
-  console.log(qr2)
   let qr3 = localStorage.getItem("qr3");
   let qr4 = localStorage.getItem("qr4");
 
@@ -132,5 +111,10 @@ function onLoad(){
   document.getElementById("Reset").addEventListener("click",function(){
     localStorage.clear();
   });
+
+
+  if(qr1 && qr2 && qr3){
+    document.getElementById("dia_extra"),style.display = "block";
+  }
   
 }
