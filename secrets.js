@@ -1,6 +1,7 @@
 // dia 29
 
 const pistaPadel = "07/01/1768"
+
 const clavePadel ="Pepe botella"
 
 const claveLaberinto = 19

@@ -20,6 +20,7 @@ function onLoad(){
 
   if( rafa && juanma && alex){
     document.body.classList.add("ocultar");
+    localStorage.setItem("qr3",true);
     setTimeout(() => {
       window.location.href = "../index.html";
     }, 1800);
