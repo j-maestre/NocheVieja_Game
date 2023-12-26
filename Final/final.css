@@ -1,0 +1,216 @@
+#pista2{
+  /* display: none; */
+  transition: all 1s ease-in-out;
+}
+
+.mostrar {
+  opacity: 1;
+}
+
+.ocultar {
+  opacity: 0;
+  /*display: none;*/
+}
+
+.title{
+  font-size: 30px;
+}
+
+.block_spoty{
+  display: none;
+}
+/* Contenido de dia29.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 18px; /* Ajustar el tamaño de fuente base */
+  transition: all 1s ease-in-out;
+}
+
+#check_laberinto{
+  display: none;
+}
+
+.secret_word{
+  display: none;
+}
+
+#pista1, #pista2 {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px; /* Hacer los bordes más redondeados */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Incrementar el tamaño de la sombra */
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px; /* Ajustar el tamaño de fuente para los títulos */
+}
+
+p {
+  text-align: center;
+  font-size: 18px; /* Ajustar el tamaño de fuente para los párrafos */
+}
+
+.content {
+  text-align: center;
+  max-width: 350px;
+  padding: 15px;
+}
+
+.content img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bloque_pirata{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+.secret_number{
+  display: none;
+}
+
+.skulls{
+  text-align: center;
+}
+
+.juanma_img{
+  display: none;
+}
+
+.mondongo_img{
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+#check_spoty{
+  display: none;
+}
+
+#puzzleCanvas {
+  background-color: #fff; /* Fondo blanco para el lienzo */
+  border: 2px solid #000; /* Borde negro para el lienzo, ajusta según sea necesario */
+}
+
+#canvas_container {
+  position: relative;
+}
+
+.canvas_block {
+  border: 2px solid #3498db; /* Borde azul */
+  cursor: crosshair; /* Cambia el cursor al estilo de cruz para indicar que se puede dibujar */
+  background-color: #ecf0f1; /* Color de fondo gris claro */
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+}
+
+#draw_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: #3498db; /* Color azul para que coincida con el borde del canvas */
+  cursor: crosshair;
+  opacity: 0.5;
+}
+
+.bloque_mondongo{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  display: none;
+}
+
+input {
+  /*padding: 15px 0px 15px 15px;
+  */
+  padding-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /*margin: 40px 0;*/
+  margin-bottom: 15px;
+  width: -webkit-fill-available;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 25px;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin: 20px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 15px 30px; /* Incrementar el relleno del enlace */
+  border-radius: 10px;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+.btn {
+  cursor: pointer;
+  background-color: #fff;
+  color: #1a1a1a;
+  padding: 15px 30px; /* Incrementar el relleno del botón */
+  border: 2px solid #fff;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/*
+.btn{
+  font-size: 20px;
+}
+*/
+/*
+.btn{
+  display: block;
+  text-align: center;
+  margin: 20px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;*/
+  /*padding: 15px 30px;*/ /* Incrementar el relleno del enlace */
+ /* border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+*/
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 600px) {
+  #pista1, #pista2 {
+    margin: 15px;
+    padding: 15px;
+  }
+}
+
