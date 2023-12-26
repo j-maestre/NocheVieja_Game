@@ -94,7 +94,6 @@ function onLoad(){
     console.log("false, nanai de la china");
     qr2_img.style.display = "none";
   }
-
   if(qr3 == "true" || qr3 == true){
     qr3_img.style.display = "block";
   }else{
@@ -114,7 +113,7 @@ function onLoad(){
 
 
   if(qr1 && qr2 && qr3){
-    document.getElementById("dia_extra"),style.display = "block";
+    document.getElementById("dia_extra").style.display = "block";
   }
   
 }

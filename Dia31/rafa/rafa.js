@@ -18,7 +18,7 @@ function checkNumber(){
   if(name ==  (horas + minutos) * 100){
     
     localStorage.setItem("rafa",true);
-    
+    alert("Me dijeron 18, contesté 9 y me dejaron pasar");
     document.body.classList.add("ocultar");
     setTimeout(() => {
       window.location.href = "../dia31.html";

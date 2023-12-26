@@ -27,3 +27,27 @@ const crucigrama = "https://puzzel.org/es/crossword/play?p=-NmVirvslgwA8uhhAs2A"
 
 
 // laberinto 19 lineas rectas en total
+
+let password_position = [20];
+
+password_position[0] = 4; // cero
+password_position[1] = 3; // uno
+password_position[2] = 3; // dos
+password_position[3] = 4; // tres
+password_position[4] = 6; // cuatro
+password_position[5] = 5; // cinco
+password_position[6] = 4; // seis
+password_position[7] = 5; // siete
+password_position[8] = 4; // ocho NO
+password_position[9] = 5; // nueve
+password_position[10] = 4; // diez
+password_position[11] = 4; // once
+password_position[12] = 4; // doce
+password_position[13] = 5; // trece
+password_position[14] = 7; // catorce NO
+password_position[15] = 6; // quince
+password_position[16] = 9; // dieciseis
+password_position[17] = 10; // diecisiete
+password_position[18] = 9; // dieciocho NO
+password_position[19] = 10; // diecinueve
+password_position[20] = 5; // veinte

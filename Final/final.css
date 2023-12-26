@@ -7,6 +7,14 @@
   opacity: 1;
 }
 
+.contrasenya{
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px; /* Hacer los bordes más redondeados */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Incrementar el tamaño de la sombra */
+}
+
 .ocultar {
   opacity: 0;
   /*display: none;*/
@@ -36,6 +44,14 @@ body {
 
 .secret_word{
   display: none;
+}
+
+.contrasenya{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 #pista1, #pista2 {
