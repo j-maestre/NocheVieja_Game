@@ -10,15 +10,19 @@ function onLoad(){
   //CreateCanvas();
 }
 
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 
 function checkEmail(){
   let email = document.getElementById("reason").value;
   let reason = document.getElementById("email").value;
 
-  console.log(reason)
-  console.log(email)
-
-  if(reason && email){
+  if(reason && email && validateEmail(reason)){
 
     //const serviceID = 'default_service';
     //const templateID = 'template_f5gwsgb';
