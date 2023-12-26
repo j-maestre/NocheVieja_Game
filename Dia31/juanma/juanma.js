@@ -10,12 +10,13 @@ function checkAnswerd(){
   if(name == "Molino"){
     console.log("de chill")
     localStorage.setItem("juanma",true);
+    alert("Me dijeron 14, contesté 7 y me dejaron pasar...");
     document.body.classList.add("ocultar");
     setTimeout(() => {
       window.location.href = "../dia31.html";
     }, 1800);
   }else{
-    let audio = new Audio("../assets/error3.ogg");
+    let audio = new Audio("../../assets/error3.ogg");
     audio.play();
   }
 }

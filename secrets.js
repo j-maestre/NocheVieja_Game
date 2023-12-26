@@ -18,10 +18,12 @@ const maps_3_link = "https://www.google.com/maps/@41.6527779,-0.8801563,3a,75y,3
 
 const crucigrama = "https://puzzel.org/es/crossword/play?p=-NmVirvslgwA8uhhAs2A";
 
-const clave1 = "https://"
-const clave2 = ""
-const clave3 = ""
-const clave4 = ""
-const clave5 = ""
+// Rafa
+// Primero a la fuente, luego 
+// En la cocina giro sin cesar, libero fragancias y humos al cocinar
+// Con jugadores que no dan un paso, en mi campo de madera, el gol es el rey del espacio
+// Soy el corazón ardiente de tu morada, con mi danza de llamas y humo
+// Si la clave quieres encontrar, los minutos y las horas deberas sumar y por 100 deberas multiplicar   
+
 
 // laberinto 19 lineas rectas en total

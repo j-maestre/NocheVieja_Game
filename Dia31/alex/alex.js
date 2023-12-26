@@ -10,7 +10,7 @@ function checkMaps(){
   if(name == "Tomata"){
     console.log("de chill")
     localStorage.setItem("alex",true);
-    
+    alert("Me dijeron 8, contesté 4 y me dejaron pasar...");
     document.body.classList.add("ocultar");
     setTimeout(() => {
       window.location.href = "../dia31.html";

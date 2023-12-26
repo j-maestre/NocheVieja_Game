@@ -277,26 +277,26 @@ function CreateCanvas() {
 
     let isTriangle = true;
 
-    if(isInRange(angle1, 50,70)){
+    if(isInRange(angle1, 45,75)){
       console.log("Primer angulo ok")
     }else{
       console.log("Es una cosa rara")
       isTriangle = false;
     }
-    if(isInRange(angle2, 50,70)){
+    if(isInRange(angle2, 45,75)){
       console.log("Segundo angulo ok")
     }else{
       console.log("Es una cosa rara")
       isTriangle = false;
     }
-    if(isInRange(angle3, 50,70)){
+    if(isInRange(angle3, 45,75)){
       console.log("Tercer angulo ok")
     }else{
       console.log("Es una cosa rara")
       isTriangle = false;
     }
   
-   return isTriangle && MagnitudeRange(points[0],points[points.length-1], 5);
+   return isTriangle && MagnitudeRange(points[0],points[points.length-1], 10);
   }
   
  
