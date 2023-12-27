@@ -79,10 +79,10 @@ function CheckSpotyWord(){
     console.log("correcto")
     document.getElementById("pista1").classList.remove("mostrar");
     document.getElementById("pista1").classList.add("ocultar");
+    let audio = new Audio("../assets/mondongo.mp3");
     setTimeout(() => {
       document.getElementById("pista1").style.display = "none";
       document.getElementById("mondongo_img").style.display = "block";
-      let audio = new Audio("../assets/mondongo.mp3");
       audio.play();
       setTimeout(() => {
         document.getElementById("mondongo_img").style.display = "none";
