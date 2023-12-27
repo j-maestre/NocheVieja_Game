@@ -3,6 +3,7 @@
 const pistaPadel = "07/01/1768"
 
 const clavePadel ="Pepe botella"
+const clavePozo ="Ves i comprat un piano"
 
 const claveLaberinto = 19
 const claveSpoty = "Mondongo"

@@ -1,4 +1,4 @@
-#pista2{
+#pista2, #pista1_5{
   /* display: none; */
   transition: all 1s ease-in-out;
 }
@@ -26,12 +26,20 @@ body {
   transition: all 1s ease-in-out;
 }
 
-#pista1, #pista2 {
+#pista1, #pista2, #pista1_5 {
   margin: 20px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 15px; /* Hacer los bordes más redondeados */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Incrementar el tamaño de la sombra */
+}
+
+
+#pista1_5{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 h1 {
@@ -73,7 +81,7 @@ a:hover {
 
 /* Estilo para dispositivos móviles */
 @media (max-width: 600px) {
-  #pista1, #pista2 {
+  #pista1, #pista2, #pista1_5 {
     margin: 15px;
     padding: 15px;
   }

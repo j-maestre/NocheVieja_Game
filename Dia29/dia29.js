@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", onLoad);
 function onLoad(){
   document.getElementById("btn-check-padel").addEventListener("click",checkPadel);
   document.getElementById("btn-check-number").addEventListener("click",checkNumber);
+  document.getElementById("btn-check-pozo").addEventListener("click",checkPozo);
+
 
   let bloque2 = document.getElementById("pista2");
   bloque2.classList.remove("mostrar");
@@ -11,12 +13,24 @@ function onLoad(){
   
 }
 
+function checkPozo(){
+  let value = document.getElementById("secret-pozo").value;
+  if(value == clavePozo){
+    //document.getElementById("pista2").style.display = "block"
+    document.getElementById("pista2").classList.add("mostrar");
+    document.getElementById("pista2").classList.remove("ocultar");
+  }else{
+    let audio = new Audio("../assets/error2.ogg");
+    audio.play();
+  }
+}
+
 function checkPadel(){
   let text = document.getElementById("secret-padel");
   if(text.value == "Pepe botella"){
     //document.getElementById("pista2").style.display = "block"
-    document.getElementById("pista2").classList.add("mostrar");
-    document.getElementById("pista2").classList.remove("ocultar");
+    document.getElementById("pista1_5").classList.add("mostrar");
+    document.getElementById("pista1_5").classList.remove("ocultar");
   }else{
     let audio = new Audio("../assets/error2.ogg");
     audio.play();
