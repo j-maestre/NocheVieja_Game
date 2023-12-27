@@ -160,7 +160,9 @@ function CreateCanvas() {
   function stopDrawing() {
     drawing = false;
     if (isTriangle(points)) {
-      alert("Noo!! Descubriste mi secreto...");
+     // alert("Noo!! Descubriste mi secreto...");
+      let audio = new Audio("../assets/zelda.mp3");
+      audio.play();
       setTimeout(() => {
         document.body.classList.add("ocultar");
         setTimeout(() => {
