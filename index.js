@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", onLoad);
 
 //var fechaDia29 = new Date("2023-12-24T23:00:00Z");
-var fechaDia29 = new Date("2023-12-29T23:00:00Z");
+var fechaDia29 = new Date("2023-12-29T15:00:00Z");
 
 //var fechaDia30 = new Date("2023-12-24T23:00:00Z");
-var fechaDia30 = new Date("2023-12-30T23:00:00Z");
+var fechaDia30 = new Date("2023-12-30T15:00:00Z");
 
 //var fechaDia31 = new Date("2023-12-24T23:00:00Z");
-var fechaDia31 = new Date("2023-12-31T23:00:00Z");
+var fechaDia31 = new Date("2023-12-31T15:00:00Z");
 
 function ActualizarContadores(){
   let fechaActual = new Date();
